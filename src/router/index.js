@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import CustomerCreate from '../views/CustomerCreate.vue'
+import CustomerDetail from '../views/CustomerDetail.vue'
+import Update from '../views/Update.vue'
+
 
 Vue.use(VueRouter)
 
@@ -9,6 +13,21 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/customercreate',
+    name: 'customercreate',
+    component: CustomerCreate
+  },
+  {
+    path: '/customer/:id',
+    name: 'customer',
+    component: CustomerDetail
+  },
+  {
+    path: '/update/:id',
+    name: 'update',
+    component: Update
   },
   {
     path: '/about',

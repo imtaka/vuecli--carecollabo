@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <CustomerList v-for="customer in customers"
+      :key="customer.id"
+      :customer="customer"
+    />
+
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import CustomerList from '@/components/CustomerList'
+import { db } from '@/main'
 export default {
-  name: 'Home',
+  name: 'home',
   components: {
-    HelloWorld
+    CustomerList
+  },
+  data() {
+    return {
+      customers: []
+    }
+  },
+  firestore() {
+    return {
+      customers: db.collection('customers')
+    }
   }
 }
 </script>
