@@ -47,7 +47,7 @@ export default {
         gender: this.gender,
       })
       .then((customer) =>
-        this.$router.push('/post/' + this.customer.id),
+        this.$router.push('/customer/' + this.customer.id),
         alert('利用者新規登録完了'),
         this.name = '',
         this.age = '',

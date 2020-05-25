@@ -14,7 +14,7 @@ Vue.use(VueDateFns);
 
 Vue.use(firestorePlugin)
 firebase.initializeApp({
-
+  
 })
 export const db = firebase.firestore()
 

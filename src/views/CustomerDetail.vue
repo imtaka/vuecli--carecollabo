@@ -13,6 +13,8 @@
          @click="remove"
        >利用者を削除する</button>
   </div>
+      <router-link :to=" '/customer/' + customer.id +'/careplanhome/'">ケアプラン一覧へ</router-link>
+
   </div>
 </template>
 
